@@ -6,7 +6,7 @@ class Map:
    # def generate_rivers():
 
    # def generate_forest():
-     def print_map():
+     def print_map(self):
          for row in self.cells:
              for cell in row:
                  if  cell == 0:
