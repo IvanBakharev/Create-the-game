@@ -1,10 +1,20 @@
 from utils import randbool
-from utils import radcell
+from utils import randcell
+from utils import randcell2
 
 CELL_TYPES = "🟩🌳🌊🏥🏬"
 class Map:     
     def generate_river(self, l):
-        rc = radcell(self.w, self.h)
+        rc = randcell(self.w, self.h)
+        rx, ry = rc[0], rc[1]
+        self.cells[rx][ry] = 2
+        while l > 0:
+            rc2 = randcell2(rx, ry)
+            rx2, ry2 = rc2[0], rc2[1]
+            if (self.check_bounds(rx2, ry2)):
+                self.cells[rx2][ry2] = 2
+                rx, ry = rx2, ry2
+                l -= 1
 
     def generate_forest(self, r, mxr):
         for ri in range(self.h):
@@ -33,6 +43,8 @@ class Map:
         self.cells = [[0 for i in range(w)] for j in range(h)]
 
 tmp = Map(20, 10)
-#tmp.generate_forest(3, 10)
+tmp.generate_forest(3, 10)
+tmp.generate_river(10)
+tmp.generate_river(20)
 tmp.print_map()        
         
