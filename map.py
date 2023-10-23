@@ -1,9 +1,5 @@
-
-
-class Map:
-    
-
-   # def generate_rivers():
+class Map:     
+  # def generate_rivers():
 
    # def generate_forest():
      def print_map(self):
@@ -20,6 +16,6 @@ class Map:
             
      def __init__(self, w, h):
         self.cells = [[0 for i in range(w)] for j in range(h)]
-
-tmp = Map = (10, 10)    
-tmp.print_map()    
+        
+tmp = Map = (10, 10)
+tmp.print_map()   
