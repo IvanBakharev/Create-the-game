@@ -3,8 +3,11 @@ class Helicopter:
     def __init__(self, w, h):
         rc = randcell(w, h)
         rx, ry = rc[0], rc[1]
-        self.x = rx
+        self.h = h
+        self.w = w
         self.y = ry
+        self.x = rx
+
 
     def move(self, dx, dy):
         nx, ny = dx + self.x, dy + self.y   

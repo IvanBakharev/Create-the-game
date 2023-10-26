@@ -6,7 +6,7 @@ import time
 import os
 from helicopter import Helicopter as Helico
 
-TICK_SLEEP = 2
+TICK_SLEEP = 1
 TREE_UPDATE = 40
 FIRE_UPDATE = 60
 MAP_W, MAP_H = 20, 10
@@ -19,11 +19,12 @@ field.generate_river(20)
 helico = Helico(MAP_W, MAP_H)
 
 
-MOVES = {'w': (-1, 0), 'd': (0, 1), 's': (1, 0), 'a': (0, 1)}
+MOVES = {'w': (-1, 0), 'd': (0, 1), 's': (1, 0), 'a': (0, -1)}
 def process_key(key):
     c = key.char.lower()
     if c in MOVES.keys():
-        print("OK")
+       dx, dy = MOVES[c][0], MOVES[c][1]
+       helico.move(dx, dy)
 listener = keyboard.Listener(
     on_press=None,
     on_release=process_key,)
