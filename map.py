@@ -61,5 +61,13 @@ class Map:
                 cell = self.cells[ri][ci]
                 if cell == 5:
                     self.cells[ri][ci] = 0
-        for i in range(8):            
-            self.add_fire()            
+        for i in range(5):            
+            self.add_fire()
+
+    def process_helicopter(self, helico):
+        c = self.cells[helico.x][helico.y]
+        if (c == 2):
+            helico.tank = helico.mxtank
+        elif (c == 5 and helico.tank > 0):
+            helico.tank -= 1
+            self.cells[helico.x][helico.y] = 1    

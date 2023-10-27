@@ -8,7 +8,7 @@ from helicopter import Helicopter as Helico
 
 TICK_SLEEP = 1
 TREE_UPDATE = 40
-FIRE_UPDATE = 60
+FIRE_UPDATE = 30
 MAP_W, MAP_H = 20, 10
 
 field = Map(MAP_W, MAP_H)
@@ -37,6 +37,8 @@ tick = 1
 while True:
     os.system("cls")
     print("TICK", tick)
+    field.process_helicopter(helico)
+    helico.print_stats()
     field.print_map(helico)
     tick += 1
     time.sleep(TICK_SLEEP)
