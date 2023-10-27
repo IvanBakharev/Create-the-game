@@ -8,7 +8,7 @@ from helicopter import Helicopter as Helico
 
 TICK_SLEEP = 1
 TREE_UPDATE = 40
-FIRE_UPDATE = 30
+FIRE_UPDATE = 10
 MAP_W, MAP_H = 20, 10
 
 field = Map(MAP_W, MAP_H)
