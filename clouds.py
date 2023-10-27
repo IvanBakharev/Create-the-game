@@ -6,7 +6,7 @@ class Clouds:
         self.h = h
         self.cells = [[0 for i in range(w)] for j in range(h)]
 
-    def update(self, r = 2, mxr = 3, g = 4, mxg = 10):
+    def update(self, r = 4, mxr = 4, g = 2, mxg = 10):
         for i in range(self.h):
             for j in range(self.w):
                 if randbool(r, mxr):

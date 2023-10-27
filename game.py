@@ -36,7 +36,7 @@ tick = 1
 while True:
     os.system("cls")
     print("TICK", tick)
-    field.process_helicopter(helico)
+    field.process_helicopter(helico, clouds)
     helico.print_stats()
     field.print_map(helico, clouds)
     tick += 1
