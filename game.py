@@ -12,9 +12,6 @@ FIRE_UPDATE = 10
 MAP_W, MAP_H = 20, 10
 
 field = Map(MAP_W, MAP_H)
-field.generate_forest(3, 10)
-field.generate_river(10)
-field.generate_river(20)
 
 helico = Helico(MAP_W, MAP_H)
 
