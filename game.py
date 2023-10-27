@@ -1,3 +1,7 @@
+from utils import randcell2
+from utils import randcell
+from utils import randbool
+
 # 🌳 🚁 🌊 🔥 🏥 ❤️ ⚡ 🏆 ☁️ 🧺 🏬
 
 from map import Map
@@ -7,7 +11,7 @@ import os
 from helicopter import Helicopter as Helico
 from clouds import Clouds
 
-TICK_SLEEP = 0.9
+TICK_SLEEP = 0.3
 TREE_UPDATE = 40
 CLOUDS_UPDATE = 20
 FIRE_UPDATE = 10
@@ -46,4 +50,4 @@ while True:
     if (tick % FIRE_UPDATE == 0):
         field.update_fire()
     if (tick % CLOUDS_UPDATE == 0):
-        clouds.update()  
+        clouds.update()

@@ -1,6 +1,7 @@
 from utils import randbool
 from utils import randcell
 from utils import randcell2
+from clouds import Clouds
 
 CELL_TYPES = "🟩🌳🌊🏥🏬🔥"
 
