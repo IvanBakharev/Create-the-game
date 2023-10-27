@@ -6,7 +6,7 @@ CELL_TYPES = "🟩🌳🌊🏥🏬🔥"
 
 TREE_BONUS = 100
 UPGRADE_COST = 5000
-LIFE_COST = 100
+LIFE_COST = 10000
 class Map:
     def __init__(self, w, h):
         self.w = w
